@@ -43,15 +43,13 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
-        'mysql' => [
+'mysql' => [
     'driver' => 'mysql',
-    'url' => env('DATABASE_URL'),
-    'host' => env('DB_HOST', 'laravserver-database.mysql.database.azure.com'),
-    'port' => env('DB_PORT', '3306'),
-    'database' => env('DB_DATABASE', 'laravserver-database'),
-    'username' => env('DB_USERNAME', 'wxlraymedm'),
-    'password' => env('DB_PASSWORD', 'pOU$SF2pzQHSYQyf'),
-    'unix_socket' => env('DB_SOCKET', ''),
+    'host' => env('AZURE_MYSQL_HOST', 'laravserver-server.mysql.database.azure.com'),
+    'port' => env('AZURE_MYSQL_PORT', '3306'),
+    'database' => env('AZURE_MYSQL_DBNAME', 'laravserver-database'),
+    'username' => env('AZURE_MYSQL_USERNAME', 'wxlraymedm'),
+    'password' => env('AZURE_MYSQL_PASSWORD', 'pOU$SF2pzQHSYQyf'),
     'charset' => 'utf8mb4',
     'collation' => 'utf8mb4_unicode_ci',
     'prefix' => '',
